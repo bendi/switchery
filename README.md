@@ -1,5 +1,3 @@
-![Switchery](http://i.imgur.com/xJAM3Jq.png)
-
 ## Description
 
 Switchery is a simple component that helps you turn your default HTML checkbox inputs into beautiful iOS 7 style switches in just few simple steps. You can easily customize switches, so that they match your design perfectly.
@@ -10,7 +8,7 @@ This fork uses css pseudoclass ```:checked``` in order to achieve the same funct
 
 ## Credits
 
-- Original version (https://github.com/vesln)
+- Original version [Switchery](https://github.com/abpetkov/switchery)
 
 ## Contact
 
