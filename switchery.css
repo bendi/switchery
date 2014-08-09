@@ -1,11 +1,17 @@
 /*
  *
  * Main stylesheet for Switchery.
- * http://abpetkov.github.io/switchery/
  *
  */
 
-.switchery {
+/* less-like markup */
+/*
+@color          : '#dfdfdf'
+@secondaryColor : '#64bd63'
+@speed          : '0.4s'
+*/
+
+input[type='checkbox'] + label {
   background-color: #fff;
   border: 1px solid #dfdfdf;
   border-radius: 20px;
@@ -19,9 +25,32 @@
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
+  /*  transition: border @speed, box-shadow @speed, background-color @speed * 3; */  
+  transition: border 0.4s, box-shadow 0.4s, background-color 1.2s; 
+  -webkit-transition: border 0.4s, box-shadow 0.4s, background-color 1.2s;
+  
+  /* box-shadow: inset 0 0 0 0 @color; */
+  box-shadow: inset 0 0 0 0 #dfdfdf;
+  /* border-color: @color; */
+  border-color: #dfdfdf;
+  /*background-color = (@secondaryColor !== defaults.secondaryColor) ? this.options.secondaryColor : '#fff';*/
+  background-color: #fff;
 }
 
-.switchery > small {
+input[type='checkbox']:checked  + label {
+  /* box-shadow: inset 0 0 0 16px @secondaryColor */;
+  box-shadow: inset 0 0 0 16px #64bd63;
+  /* border-color: @secondaryColor; */
+  border-color: #64bd63;
+  /* background-color: @secondaryColor; */
+  background-color: #64bd63;
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+input[type='checkbox'] + label:after {
   background: #fff;
   border-radius: 100%;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
@@ -29,4 +58,15 @@
   position: absolute;
   top: 0;
   width: 30px;
+  left: 0px; 
+  transition: all 0.2s; /* @speed/2 */
+  -webkit-transition: all 0.2s; /* @speed/2 */
+
+  content: " ";
+  display: block;
+}
+
+input[type='checkbox']:checked  + label:after {
+  left: 100%;
+  margin-left: -30px;
 }

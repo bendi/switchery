@@ -1,4 +1,9 @@
 
+0.6.1-bendi / 2014-08-09
+==================
+
+ * Added css-only version using :checked pseudoclass
+
 0.6.1 / 2014-07-11
 ==================
 
